@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:dartcarwings/src/carwings_battery.dart';
-import 'package:dartcarwings/src/carwings_cabin_temperature.dart';
+//import 'package:dartcarwings/src/carwings_cabin_temperature.dart';
 import 'package:dartcarwings/src/carwings_hvac.dart';
-import 'package:dartcarwings/src/carwings_location.dart';
+//import 'package:dartcarwings/src/carwings_location.dart';
 import 'package:dartcarwings/src/carwings_session.dart';
 import 'package:dartcarwings/src/carwings_stats_daily.dart';
 import 'package:dartcarwings/src/carwings_stats_monthly.dart';
@@ -281,7 +281,7 @@ class CarwingsVehicle {
 
     return null;
   }
-
+/*
   Future<CarwingsCabinTemperature?> requestCabinTemperatureLatest() async {
     var response = await session.requestWithRetry('CheckCabinTemp.php', {
       'custom_sessionid': customSessionID ?? '',
@@ -299,6 +299,7 @@ class CarwingsVehicle {
 
     return null;
   }
+
 
   Future<CarwingsCabinTemperature?> requestCabinTemperature() async {
     var response = await session
@@ -346,7 +347,7 @@ class CarwingsVehicle {
 
     return null;
   }
-
+*/
   Future<CarwingsBattery?> requestBatteryStatusLatest() async {
     var response =
         await session.requestWithRetry('BatteryStatusRecordsRequest.php', {
@@ -365,7 +366,7 @@ class CarwingsVehicle {
 
     return null;
   }
-
+/*
   Future<CarwingsLocation?> requestLocation() async {
     var response = await session.requestWithRetry('MyCarFinderRequest.php', {
       'custom_sessionid': customSessionID ?? '',
@@ -409,7 +410,7 @@ class CarwingsVehicle {
 
     return null;
   }
-
+*/
   bool responseValidHandler(response, {retries = -1}) =>
       response['status'] != 200 || retries == 0 ? throw 'Error' : true;
 
