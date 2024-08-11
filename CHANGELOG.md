@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2 (2024-08-11)
+Trying to fix errors when code attempts to get current cabin temperature - I don't think this works for my model of leaf
+
 ## 1.0.1 (2024-06-14)
 
 
